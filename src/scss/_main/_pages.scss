@@ -1,0 +1,401 @@
+body {
+
+	&.page {
+
+		&.home {
+
+			h2 {
+				font-weight: $semibold;
+				color: $text;
+			}
+
+			.section_quality-logos h2.hidden {
+				display: block !important;
+			}
+		}
+
+		&.page-template-page-blog {
+
+			.section__q-loop {
+
+				&::before {
+					content:'';
+					background: url('../../assets/img/svg/art7.svg') 100% / auto 100% no-repeat;
+					position: absolute;
+					display: block;
+					right: -100px;
+					top: 220px;
+					width: 325px;
+					height: 358px;
+					z-index: 0;
+
+					@include media-breakpoint-down(xl) {
+						display: none;
+					}
+				}
+
+				.wp-block-query {
+
+					ul {
+						display: inline-block;
+
+						li {
+							max-width: calc(33.3333% - 25px);
+							background-color: $white;
+							margin-bottom: 50px;
+							margin-right: 25px;
+							border-radius: 9px;
+							height: 570px;
+							float: left;
+
+							@include media-breakpoint-down(xl) {
+								height: 470px;
+							}
+
+							@include media-breakpoint-down(xl) {
+								max-width: 100%;
+								margin-right: 0;
+							}
+
+							&:nth-child(1),
+							&:nth-child(4) {
+								max-width: calc(66.6667% - 25px);
+
+								@include media-breakpoint-down(xl) {
+									max-width: 100%;
+								}
+							}
+
+							&:nth-child(2),
+							&:nth-child(4),
+							&:nth-child(7) {
+								margin-right: 0;
+							}
+
+							&:nth-child(2),
+							&:nth-child(3) {
+
+								@include media-breakpoint-down(xl) {
+									max-width: calc(50% - 15px);
+									height: 520px;
+								}
+
+								@include media-breakpoint-down(sm) {
+									max-width: 100%;
+									height: 470px;
+								}
+							}
+
+							&:nth-child(2) {
+
+								@include media-breakpoint-down(xl) {
+									margin-right: 30px;
+								}
+
+								@include media-breakpoint-down(sm) {
+									margin-right: 0;
+								}
+							}
+
+							&:hover {
+								box-shadow: 0 6px 15px #0000000f;
+							}
+
+							.wp-block-post {
+								
+								&-featured-image {
+
+									img {
+										border-radius: 9px;
+										min-height: 400px;
+										object-fit: cover;
+
+										@include media-breakpoint-down(xl) {
+											min-height: 300px;
+										}
+									}
+
+									&::after {
+										content:'';
+										background-color: $white;
+										position: absolute;
+										display: block;
+										width: 100%;
+										height: 9px;
+										bottom: 0;
+									}
+								}
+
+								&-title {
+									max-width: 96%;
+									padding-left: 20px;
+
+									a:hover {
+										color: $text;
+									}
+								}
+
+								&-date {
+									display: inline-block;
+									font-size: 12px;
+									letter-spacing: 0.12px;
+									font-weight: $light;
+									padding-left: 20px;
+									margin-bottom: 20px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			h1 {
+
+				& + p {
+					max-width: 897px;
+				}
+			}
+		}
+
+		&.page-template-page-contact {
+
+			ul.contact-details {
+				display: inline-block;
+				padding-top: 10px;
+
+				li {
+					max-width: 364px;
+					font-weight: $regular;
+					padding-left: 30px;
+
+					&::before {
+						background: url('../../assets/img/svg/contact-email.svg') 100% / auto 100% no-repeat;
+						border-radius: 0;
+						width: 18px;
+						height: 15px;
+					}
+
+					&:nth-child(2)::before {
+						background-image: url('../../assets/img/svg/contact-phone.svg');
+						width: 15px;
+					}
+
+					&:nth-child(3)::before {
+						background-image: url('../../assets/img/svg/contact-location.svg');
+						width: 13px;
+						height: 18px;
+					}
+				}
+			}
+
+			.wp-block-spacer {
+
+				@include media-breakpoint-down(lg) {
+					height: 30px !important;
+				}
+			}
+
+			form.wpcf7-form {
+				padding: 0 0 50px 55px;
+				box-shadow: none;
+				padding-right: 0;
+
+				@include media-breakpoint-down(lg) {
+					padding: 0;
+				}
+
+				.btn.wpcf7-submit {
+					margin: 0 auto !important;
+					padding: 14px 54px !important;
+				}
+			}
+		}
+	}
+
+	&.single-post {
+
+		.wp-block-post {
+
+			&-featured-image {
+				border-radius: 9px;
+				overflow: hidden;
+				display: block;
+
+				img {
+					max-height: 598px;
+					object-fit: cover;
+					
+				}
+			}
+			
+			&-content-wrap {
+				position: relative;
+				margin: 50px auto;
+				max-width: 813px;
+			}
+
+			&-title {
+
+				@include fontRemSize($h2);
+				letter-spacing: 0.4px;
+				font-weight: $bold !important;
+				line-height: 50px;
+				margin-bottom: 30px;
+			
+				@include media-breakpoint-down(lg) {
+					@include fontRemSize($h2Tab);
+					line-height: 50px;
+					margin-bottom: 25px;
+				}
+			
+				@include media-breakpoint-down(sm) {
+					@include fontRemSize($h2Mob);
+					letter-spacing: 0.32px;
+					line-height: 40px;
+				}
+			}
+
+			&-date {
+				font-weight: $semibold;
+			}
+		}
+
+		.post-navigation-link {
+
+			&-previous,
+			&-next {
+
+				&::before {
+					content:'';
+					background: url('../../assets/img/svg/arr-sl-left.svg') 100% / auto 100% no-repeat;
+					position: absolute;
+					display: block;
+					width: 5px;
+					height: 9px;
+					margin-top: 8px;
+				}
+			}
+				
+			&-previous {
+				position: relative;
+				padding-left: 20px;
+				float: left;
+
+				&::before {
+					left: 0;
+				}
+			}
+
+			&-next {
+				padding-right: 20px;
+				float: right;
+
+				&::before {
+					transform: rotate(180deg);
+					right: 0;
+				}
+			}
+		}
+	}
+
+	&.terms-conditions,
+	&.privacy-policy {
+
+		h2,
+		h3 {
+			text-transform: uppercase;
+		}
+
+		.wpb_text_column ul {
+			list-style: disc;
+		
+			li {
+				position: relative;
+				padding-left: 0;
+				margin-bottom: 15px;
+				font-family: $body-font;
+				font-size: 18px;
+				line-height: 26px;
+				color: #74769E;
+
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&.error404 {
+
+		main {
+
+			h1,
+			p,
+			span {
+				color: $text;
+			}
+
+			h1 {
+				font-weight: $black;
+			}
+
+			.wp-block-search {
+				
+				&__inside-wrapper {
+					border-width: 0 0 1px 0;
+				}
+
+				&__button {
+					background-color: transparent;
+					border: 0;
+
+					svg {
+
+						path {
+							fill: $white;
+						}
+					}
+				}
+			}
+
+			.btn {
+				margin-top: 40px;
+				padding: 15px 40px;
+			}
+		}
+	}
+
+	&.search {
+
+		main {
+
+			h1,
+			h2,
+			div,
+			p {
+				color: $text;
+			}
+
+			h1,
+			h2 {
+				font-weight: bold;
+			}
+
+			.wp-block-query {
+
+				ul {
+
+					li {
+
+						&:last-child {
+
+							hr {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+} 

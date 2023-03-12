@@ -1,0 +1,75 @@
+{
+    "version": 1.0,
+	"customTemplates": [
+		{
+			"name": "page-home",
+			"title": "Home (Front Page)",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-about",
+			"title": "Page About",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-blog",
+			"title": "Page Blog",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-sectors",
+			"title": "Page Sectors",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-join-us",
+			"title": "Page Join Us",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-contact",
+			"title": "Page Contact",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "blank",
+			"title": "Blank",
+			"postTypes": [
+				"page",
+				"post"
+			]
+		},
+		{
+			"name": "single-join-us",
+			"title": "Single Post",
+			"postTypes": [
+				"post"
+			]
+		},
+		{
+			"name": "single",
+			"title": "Single Join Us",
+			"postTypes": [
+				"post"
+			]
+		}
+	],
+    "templateParts": [
+		{
+			"name": "header",
+			"area": "header"
+		},
+		{
+			"name": "hero-banner",
+			"area": "hero-banner"
+		},
+		{
+			"name": "footer",
+			"area": "footer"
+		},
+		{
+			"name": "archive",
+			"area": "archive"
+		}
+	]
+}

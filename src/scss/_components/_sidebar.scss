@@ -1,0 +1,52 @@
+aside#secondary {
+	border-bottom: 15px solid white;
+	will-change: min-height;
+
+	@include media-breakpoint-down(lg) {
+		margin-top: 0 !important;
+		max-width: calc(100vw - 30px);
+	}
+
+	@include media-breakpoint-down(sm) {
+		max-width: 100%;
+	}
+
+	.inner-wrapper-sticky {
+		transform: translate(0, 0); /* For browsers don't support translate3d. */
+		transform: translate3d(0, 0, 0);
+		will-change: position, transform;
+		padding-bottom: 40px !important;
+
+		.widget {
+			min-width: 357px;
+		}
+	}
+
+	&.is-affixed .inner-wrapper-sticky {
+		padding-left: 25px !important;
+		max-width: 357px;
+		right: 25px;
+	}
+
+	.cms-contact-box {
+
+		@include media-breakpoint-down(lg) {
+			display: none !important;
+		}
+	}
+}
+
+body.overview {
+
+	.wpb_single_image .vc_figure {
+		width: 100%;
+
+		.vc_single_image-wrapper {
+			display: block;
+		
+			img {
+				width: 100%;
+			}
+		}
+	}
+}

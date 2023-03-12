@@ -1,0 +1,178 @@
+body {
+
+	.main-menu {
+		position: relative;
+	}
+
+	.wp-block-navigation {
+		position: relative;
+
+		&__responsive-container {
+
+			&.is-menu {
+
+				&-open {
+					animation: grow-line 2s forwards;
+					background: $white !important;
+					max-width: 50vw;
+					width: 50vw;
+
+					@include media-breakpoint-down(xl) {
+						animation: grow-line 0.4s forwards;
+						max-width: 100vw;
+						left: inherit;
+						width: 100vw;
+						right: 0;
+					}
+
+					&.closed {
+						animation: grow-line-back 0.5s forwards;
+						padding: 0 !important;
+					}
+				}
+			}
+
+			&-open {
+				position: fixed;
+				transform: rotate(0deg);
+				transition: .5s ease-in-out;
+				z-index: 9999999;
+  				cursor: pointer;
+				display: block;
+				width: 24px;
+				height: 20px;
+				left: 80px;
+				top: 40px;
+
+				&::after {
+					content: 'menu';
+					text-transform: uppercase;
+					font-family: $body-font;
+					letter-spacing: 0.56px;
+					margin-left: 10px;
+					position: absolute;
+					font-size: 14px;
+					color: $white;
+					width: 100px;
+					top: 0;
+
+					@include media-breakpoint-down(xl) {
+						display: none;
+					}
+				}
+
+				@include media-breakpoint-down(xl) {
+					top: 30px;
+					right: 40px;
+					left: inherit;
+				}
+
+				@include media-breakpoint-down(sm) {
+					right: 20px;
+				}
+
+				i {
+					display: block;
+					position: absolute;
+					transform: rotate(0deg);
+					transition: .25s ease-in-out;					
+					background: $text;
+					border-radius: 2px;
+					width: 100%;
+					height: 3px;
+					opacity: 1;
+					left: 0;
+
+					&:nth-child(1) {
+						transform-origin: left center;
+						top: 0;						
+					}
+
+					&:nth-child(2) {
+						transform-origin: left center;
+						top: 8px;
+					}
+
+					&:nth-child(3) {
+						transform-origin: left center;
+						top: 16px;
+					}
+				}
+
+				&.close {
+
+					i {
+
+						&:nth-child(1) {
+							transform: rotate(45deg);
+							top: 0;
+							left: 8px;
+						}
+	
+						&:nth-child(2) {
+							width: 0;
+ 							opacity: 0;
+						}
+	
+						&:nth-child(3) {
+							transform: rotate(-45deg);
+							top: 17px;
+    						left: 8px;
+						}
+					}
+				}
+
+				svg {
+					display: none;
+				}
+			}
+
+			&-close {
+				display: none !important;
+			}
+
+			&-content {
+				position: relative;
+				padding-top: 10px;
+			}
+		}
+
+		&__container {
+			
+			@include media-breakpoint-down(xl) {
+				max-width: fit-content;
+				width: 100%;
+				left: 0;
+			}
+		}
+	}
+
+	.cms-breadcrumb {
+		margin: 40px 0;
+	}
+
+	@media screen and (min-width: 992px) {
+		
+		.primary-menu .sub-menu {
+			min-width: fit-content;
+
+			li > a {
+				padding-right: 15px;
+			}
+		}
+	}
+}
+
+html.has-modal-open {
+
+	.wp-block-navigation__responsive-container-open::after {
+		display: none;
+	}
+
+	.main-menu {
+		
+		.short-component {
+			display: block;
+		}
+	}
+}

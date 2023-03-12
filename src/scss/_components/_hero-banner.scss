@@ -1,0 +1,58 @@
+.hero-banner {
+	//background-attachment: fixed;
+	background-color: $turq;
+	background-position: right top;
+	background-repeat: no-repeat;
+	background-size: auto 100%; 
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+    height: 350px;
+    display: block;
+	z-index: 0;
+    top: 0;
+
+	@include media-breakpoint-down(xxxl) {
+
+		h1 {
+			max-width: 700px;
+		}
+	}
+
+	@include media-breakpoint-down(xxl) {
+		background-position: 60vw 0;
+		padding-left: 40px;
+	}
+
+	@include media-breakpoint-down(lg) {
+		margin-top: 100px;
+		height: 280px;
+
+		h1 {
+			max-width: 60vw;
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		background-image: none !important;
+		padding-left: 20px;
+	}
+
+	.container-boxed {
+
+		h1 {
+			position: absolute;
+			transform: translateY(-50%);
+			top: 50%;
+			color: white;
+		}
+	}
+
+	&-archive {
+		background-image: url('../../assets/img/bg/hero-single-min.png') !important;
+
+		@include media-breakpoint-down(sm) {
+			background-image: none !important;
+		}
+	}
+}

@@ -1,0 +1,105 @@
+body {
+	font-family: $body-font;
+	font-size: $body;
+}
+
+h1,
+h2,
+h3 {
+	font-family: $heading-font;
+}
+
+h4 {
+	font-family: $body-font;
+}
+
+h5,
+h6 {
+	font-family: $body-font;
+}
+
+h1 {
+	@include fontRemSize($h1);
+	letter-spacing: 0.5px;
+	font-weight: $bold;
+	line-height: 63px;
+	margin-bottom: 30px;
+
+	@include media-breakpoint-down(lg) {
+		@include fontRemSize($h1Tab);
+		line-height: 63px;
+		margin-bottom: 25px;
+	}
+
+	@include media-breakpoint-down(sm) {
+		@include fontRemSize($h1Mob);
+		line-height: 50px;
+		letter-spacing: 0.4px;
+	}
+}
+
+h2 {
+	@include fontRemSize($h2);
+	letter-spacing: 0.4px;
+	font-weight: $bold !important;
+	line-height: 50px;
+	margin-bottom: 30px;
+
+	@include media-breakpoint-down(lg) {
+		@include fontRemSize($h2Tab);
+		line-height: 50px;
+		margin-bottom: 25px;
+	}
+
+	@include media-breakpoint-down(sm) {
+		@include fontRemSize($h2Mob);
+		letter-spacing: 0.32px;
+		line-height: 40px;
+	}
+}
+
+h3 {
+	@include fontRemSize($h3);
+	letter-spacing: 0.26px;
+	font-weight: $bold;
+	line-height: 30px;
+	margin-bottom: 15px;
+
+	@include media-breakpoint-down(lg) {
+		@include fontRemSize($h3Tab);
+		line-height: 30px;
+	}
+
+	@include media-breakpoint-down(sm) {
+		@include fontRemSize($h3Mob);
+		letter-spacing: 0.22px;
+		line-height: 25px;
+	}
+}
+
+h4 {
+	@include fontRemSize($h4);
+	font-weight: $semibold;
+}
+
+h5 {
+	@include fontRemSize($h5);
+}
+
+h6 {
+	@include fontRemSize($h6);
+}
+
+p,
+span {
+	@include fontRemSize($body);
+	font-family: $body-font;
+	letter-spacing: 0;
+	font-weight: $light;
+	color: $text;
+
+	&.semibold,
+	strong {
+		font-weight: $semibold;
+	}
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12.783" height="17.896" viewBox="0 0 12.783 17.896">
+  <defs>
+    <linearGradient id="linear-gradient" y1="-0.131" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1aa5b5"/>
+      <stop offset="0.028" stop-color="#1aa5b5"/>
+      <stop offset="1" stop-color="#2e1a6f"/>
+    </linearGradient>
+  </defs>
+  <path id="Icon_ionic-md-pin" data-name="Icon ionic-md-pin" d="M13.141,2.25A6.347,6.347,0,0,0,6.75,8.514c0,4.7,6.391,11.632,6.391,11.632s6.391-6.935,6.391-11.632A6.347,6.347,0,0,0,13.141,2.25Zm0,8.5a2.237,2.237,0,1,1,2.283-2.237A2.238,2.238,0,0,1,13.141,10.751Z" transform="translate(-6.75 -2.25)" fill="url(#linear-gradient)"/>
+</svg>

@@ -1,0 +1,81 @@
+@import url('//fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+//@import '../../assets/fonts/avenir/stylesheet.css';
+//@import url('//use.typekit.net/xqu6jsl.css');
+
+// Font - Families
+$heading-font: 'Outfit', sans-serif;
+$body-font: 'Outfit', sans-serif;
+
+// Brand colours
+$white: #FFFFFF;
+$turq: #29478F;
+$turq2:#1AA5B5;
+$indigo: #2E1571;
+$grey-light: #F5F5F5;
+$grey-light2: #e5e6e6;
+$text: #333839;
+
+$colours: (
+	"white": $white,
+	"turq": $turq,
+	"turq2": $turq2,
+	"indigo": $indigo,
+	"grey-light": $grey-light,
+	"grey-light2": $grey-light2,
+	"text": $text
+);
+
+// Font weight
+//$thin: 100;
+$light: 300;
+$regular: 400;
+//$medium: 500;
+$semibold: 600;
+$bold: 700;
+//$black: 900;
+
+// Font - Sizes
+$font-sizes: (
+	'body': 16px,
+	'btn': 16px,
+	'p12': 12px,
+	'p14': 14px,
+	'h1': 50px,
+	'h1Tab': 50px,
+	'h1Mob': 40px,
+	'h2': 40px,
+	'h2Tab': 40px,
+	'h2Mob': 32px,
+	'h3': 26px,
+	'h3Tab': 26px,
+	'h3Mob': 22px,
+	'h4': 16px,
+	'h5': 16px,
+	'h6': 16px
+);
+
+$body: map-get($font-sizes, body);
+$btn: map-get($font-sizes, btn);
+$p12: map-get($font-sizes, p12);
+$h1: map-get($font-sizes, h1);
+$h1Tab: map-get($font-sizes, h1Tab);
+$h1Mob: map-get($font-sizes, h1Mob);
+$h2: map-get($font-sizes, h2);
+$h2Tab: map-get($font-sizes, h2Tab);
+$h2Mob: map-get($font-sizes, h2Mob);
+$h3: map-get($font-sizes, h3);
+$h3Tab: map-get($font-sizes, h3Tab);
+$h3Mob: map-get($font-sizes, h3Mob);
+$h4: map-get($font-sizes, h4);
+$h5: map-get($font-sizes, h5);
+$h6: map-get($font-sizes, h6);
+
+// Line height
+$line-h-body: 26px;
+
+$container-margin: calc( -15px - ( ( 100vw - 1400px ) / 2 ) );
+$container-margin-left: calc( 15px + ( ( 100vw - 1400px ) / 2 ) );
+
+.gradient {
+	@include gradient;
+}

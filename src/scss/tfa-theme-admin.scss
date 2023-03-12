@@ -1,0 +1,24 @@
+body.wp-admin {
+
+    #adminmenu .awaiting-mod {
+        position: relative;
+        color: transparent;
+
+        &::before {
+            content:'DP';
+            position: absolute;
+            color: white;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .wp-block-heading {
+        font-weight: 500;
+        font-family: sans-serif;
+
+        strong {
+            font-weight: 700;
+        }
+    }
+}
