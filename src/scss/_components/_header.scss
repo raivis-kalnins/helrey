@@ -1,5 +1,6 @@
 .site-header {
 	background-color: $black;
+	border-bottom: rgba($white, 0.7) solid 2px;
     position: fixed;
     width: 100vw;
     height: 75px;
@@ -27,9 +28,9 @@
 
 	.wp-block-site-logo {		
 		position: inherit;
-		display: flex;
+		display: block;
 		padding: 0;
-		margin: 0;
+		margin: 0 auto;
 
 		@include media-breakpoint-down(xl) {
 			position: relative;

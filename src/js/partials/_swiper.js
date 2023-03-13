@@ -3,16 +3,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	var $ = jQuery.noConflict(), i = 0, p = 0, l = 0;
 
-	$('.section__lifecycle--slider .row').addClass('swiper-wrapper');
-	$('.section__lifecycle--slider .row .wp-block-dpwpblocks-column').addClass('swiper-slide');
+	$('.section__about--slider .row').addClass('swiper-wrapper');
+	$('.section__about--slider .row .wp-block-dpwpblocks-column').addClass('swiper-slide');
 
-	var swiper = new Swiper('.section__lifecycle--slider', {
+	var swiper = new Swiper('.section__about--slider', {
 		observeSlideChildren: true,
 		slideToClickedSlide: true,
 		updateOnWindowResize: true,
 		slidesPerColumnFill: 'row',
 		centeredSlides: true,
-		slidesPerView: 1,
+		slidesPerView: 3.5,
 		spaceBetween: 0,
 		loop: true,
 		speed: 2000,
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			onlyInViewport: false,
 		},
 		pagination: {
-			el: '.swiper-life--pagination',
+			el: '.swiper-about--pagination',
 			clickable: true,
 			renderBullet: function (index, className) {
 				return '<span class="' + className + '"></span>';
@@ -39,16 +39,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		$(this).addClass('slide' + i);
 	});
 
-	$('.swiper-life--list li').each(function() {
+	$('.swiper-about--list li').each(function() {
 		p++;
 		$(this).addClass('slide' + p);
 	});
 
-	$('.swiper-pagination-bullets').addClass('swiper-life--list');
+	$('.swiper-pagination-bullets').addClass('swiper-about--list');
 
 	$('.swiper-pagination-bullets .swiper-pagination-bullet').each(function() {
 		l++;
-		var txt = $('.swiper-life--list li.slide' + l).text();
+		var txt = $('.swiper-about--list li.slide' + l).text();
 		// console.log(txt);
 		$('.swiper-pagination-bullet.slide' + l).text(txt);
 	});

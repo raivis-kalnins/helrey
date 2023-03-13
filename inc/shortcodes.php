@@ -15,7 +15,7 @@ add_shortcode( 'com', 'dp_shortcode_com' );
 */
 function dp_shortcode_swiper_nav( $sw ) {
 	$sw = shortcode_atts( array(), $sw,'swipernav' );
-	return '<div class="swiper-life"><div class="swiper-life--pagination"></div></div>';
+	return '<div class="swiper-about"><div class="swiper-about--pagination"></div></div>';
 }
 add_shortcode( 'swipernav', 'dp_shortcode_swiper_nav' );
 
