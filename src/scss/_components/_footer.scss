@@ -35,23 +35,25 @@ footer {
 				
 									&::before {
 										content:'';	
-										background: url('../../assets/img/svg/contact-email-white.svg') 100% / auto 100% no-repeat;
+										background: url('../../assets/img/svg/contact-phone-white.svg') 100% / auto 100% no-repeat;
 										transform: translateY(-50%);
 										position: absolute;
 										border-radius: 0;
 										display: block;									
-										width: 18px;
+										width: 15px;
 										height: 15px;
 										top: 50%;
 										left: 0;
 									}
 				
-									&:nth-child(2)::before {
-										background-image: url('../../assets/img/svg/contact-phone-white.svg');
-										width: 15px;
+									&:nth-child(3)::before,
+									&:nth-child(4)::before {
+										background-image: url('../../assets/img/svg/contact-email-white.svg');
+										width: 18px;
+										height: 15px;
 									}
 				
-									&:nth-child(3)::before {
+									&:nth-child(5)::before {
 										background-image: url('../../assets/img/svg/contact-location-white.svg');
 										width: 13px;
 										height: 18px;
