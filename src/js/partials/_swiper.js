@@ -1,7 +1,10 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
-	var $ = jQuery.noConflict(), i = 0, p = 0, l = 0;
+	var $ = jQuery.noConflict(), 
+			i = 0, 
+			p = 0, 
+			l = 0;
 
 	$('.section__about--slider .row').addClass('swiper-wrapper');
 	$('.section__about--slider .row .wp-block-dpwpblocks-column').addClass('swiper-slide');
@@ -16,10 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		spaceBetween: 0,
 		loop: true,
 		speed: 2000,
-		autoplay: {
-			delay: 4000,
-			disableOnInteraction: false,
-		},
+		// autoplay: {
+		// 	delay: 4000,
+		// 	disableOnInteraction: false,
+		// },
 		keyboard: {
 			enabled: true,
 			onlyInViewport: false,
