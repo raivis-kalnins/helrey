@@ -10,8 +10,8 @@ html {
 
 body {
 	background-color: $black;
-	overflow-x: hidden;
 	font-size: $body;
+	margin: 0;
 
 	@include media-breakpoint-down(lg) {
 		font-size: $body;
@@ -79,7 +79,7 @@ body {
 					content: '';
 					position: absolute;
 					transform: translateY(-50%);
-					background-color: $turq;
+					background-color: $white;
 					border-radius: 100%;
 					display: block;
 					width: 13px;

@@ -36,7 +36,7 @@
 
 		&:hover,
 		&:active {
-			background-color: $turq;
+			background-color: $white;
 			border-color: transparent;
 			transition: all .3s ease-out;
 			opacity: 0.7;
@@ -60,27 +60,27 @@
 	}
 
 	&-secondary {
-		background-color: $turq;
-		border-color: $turq;
+		background-color: $white;
+		border-color: $white;
 		color: $white;
 
 		&:hover,
 		&:active {
-			background-color: rgba($turq, 0.7);
-			border-color: rgba($turq, 0.7);
+			background-color: rgba($white, 0.7);
+			border-color: rgba($white, 0.7);
 		}
 	}
 
 	&--dark {
 		transition: all .3s ease-out;
-		background-color: $turq;
-		border-color: $turq;
+		background-color: $white;
+		border-color: $white;
 		color: $white;
 
 		&:hover,
 		&:active {
-			background-color: $turq;
-			border-color: $turq;
+			background-color: $white;
+			border-color: $white;
 			transition: all .3s ease-out;
 			opacity: 0.7;
 		}
@@ -89,7 +89,7 @@
 	&-light {
 		transition: all .3s ease-out;
 		background-color: $white;
-		border-color: $turq2;
+		border-color: $white;
 		padding-top: 15px !important;
 		height: 56px;
 		color: $text;
@@ -97,7 +97,7 @@
 		&:hover,
 		&:active {
 			background-color: rgba($white,0.7);
-			border-color: rgba($turq2,0.7) !important;
+			border-color: rgba($white,0.7) !important;
 			transition: all .3s ease-out;
 			opacity: 0.7;
 		}
@@ -198,7 +198,7 @@
 			margin-left: 20px;
 			line-height: 22px;
 			font-size: 16px;
-			color: $turq;
+			color: $white;
 			float: left;
 		}
 	}
@@ -223,8 +223,8 @@
 
 		&:hover,
 		&:active {
-			background-color: $turq;
-			border-color: $turq;
+			background-color: $white;
+			border-color: $white;
 
 			&::before {
 				content:'';

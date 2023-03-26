@@ -34,7 +34,7 @@
 		&:hover,
 		&:focus,
 		&:active {
-			outline: $turq2 solid 1px;
+			outline: $white solid 1px;
 		}
 	}
 
@@ -167,7 +167,7 @@
 			&:active,
 			&:hover {
 				transition: all .3s ease-out;
-				border: $turq2 solid 1px;
+				border: $white solid 1px;
 			}
 		}
 
@@ -187,7 +187,7 @@
 			&:active,
 			&:hover {
 				transition: all .3s ease-out;
-				border: $turq2 solid 1px;
+				border: $white solid 1px;
 			}
 		}
 	}
