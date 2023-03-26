@@ -47,12 +47,4 @@
 			color: white;
 		}
 	}
-
-	&-archive {
-		background-image: url('../../assets/img/bg/hero-single-min.png') !important;
-
-		@include media-breakpoint-down(sm) {
-			background-image: none !important;
-		}
-	}
 }

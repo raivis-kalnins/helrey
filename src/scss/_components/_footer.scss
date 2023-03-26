@@ -35,7 +35,7 @@ footer {
 				
 									&::before {
 										content:'';	
-										background: url('../../assets/img/svg/contact-phone-white.svg') 100% / auto 100% no-repeat;
+										background: url('../../assets/img/svg/contact-phone.svg') 100% / auto 100% no-repeat;
 										transform: translateY(-50%);
 										position: absolute;
 										border-radius: 0;
@@ -48,13 +48,13 @@ footer {
 				
 									&:nth-child(3)::before,
 									&:nth-child(4)::before {
-										background-image: url('../../assets/img/svg/contact-email-white.svg');
+										background-image: url('../../assets/img/svg/contact-email.svg');
 										width: 18px;
 										height: 15px;
 									}
 				
 									&:nth-child(5)::before {
-										background-image: url('../../assets/img/svg/contact-location-white.svg');
+										background-image: url('../../assets/img/svg/contact-location.svg');
 										width: 13px;
 										height: 18px;
 									}
