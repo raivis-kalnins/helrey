@@ -121,17 +121,6 @@
 		box-shadow: none !important;
 	}
 
-	&::before {
-		background: transparent;
-		position: absolute;
-		right: -150px;
-		width: 316px;
-		height: 346px;
-		top: -30px;
-		z-index: 0;
-		content:'';
-	}
-
 	.screen-reader-response {
 		position: absolute;
 		width: 100%;

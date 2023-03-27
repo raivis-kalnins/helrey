@@ -23,6 +23,20 @@ document.addEventListener("DOMContentLoaded", function() {
 		// 	delay: 4000,
 		// 	disableOnInteraction: false,
 		// },
+		breakpoints: {
+			320: {
+				slidesPerView: 1
+			},
+			760: {
+				slidesPerView: 2
+			},
+			992: {
+				slidesPerView: 3
+			},
+			1281: {
+				slidesPerView: 3
+			}
+		},
 		keyboard: {
 			enabled: true,
 			onlyInViewport: false,

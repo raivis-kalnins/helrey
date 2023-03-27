@@ -3,13 +3,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-html {
-	margin: 0;
-	overflow-x: hidden;
-}
-
+html,
 body {
 	background-color: $black;
+	overflow-x: hidden;
 	font-size: $body;
 	margin: 0;
 

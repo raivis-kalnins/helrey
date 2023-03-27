@@ -7,23 +7,8 @@
 			"postTypes": ["page"]
 		},
 		{
-			"name": "page-about",
-			"title": "Page About",
-			"postTypes": ["page"]
-		},
-		{
 			"name": "page-blog",
 			"title": "Page Blog",
-			"postTypes": ["page"]
-		},
-		{
-			"name": "page-sectors",
-			"title": "Page Sectors",
-			"postTypes": ["page"]
-		},
-		{
-			"name": "page-join-us",
-			"title": "Page Join Us",
 			"postTypes": ["page"]
 		},
 		{
@@ -36,13 +21,6 @@
 			"title": "Blank",
 			"postTypes": [
 				"page",
-				"post"
-			]
-		},
-		{
-			"name": "single-join-us",
-			"title": "Single Post",
-			"postTypes": [
 				"post"
 			]
 		},
