@@ -21,7 +21,7 @@ h6 {
 h1 {
 	@include fontRemSize($h1);
 	letter-spacing: 0.5px;
-	font-weight: $bold;
+	font-weight: $regular;
 	line-height: 63px;
 	margin-bottom: 30px;
 
@@ -41,7 +41,7 @@ h1 {
 h2 {
 	@include fontRemSize($h2);
 	letter-spacing: 0.4px;
-	font-weight: $bold !important;
+	font-weight: $regular !important;
 	line-height: 50px;
 	margin-bottom: 30px;
 
@@ -61,7 +61,7 @@ h2 {
 h3 {
 	@include fontRemSize($h3);
 	letter-spacing: 0.26px;
-	font-weight: $bold;
+	font-weight: $regular;
 	line-height: 30px;
 	margin-bottom: 15px;
 

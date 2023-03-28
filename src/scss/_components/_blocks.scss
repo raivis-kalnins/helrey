@@ -328,8 +328,43 @@
 
 		cite {
 
+			strong {
+				font-family: $heading-font;
+				letter-spacing: 2px;
+				font-weight: 200;
+				font-size: 20px;				
+			}
+
 			em {
+				text-transform: uppercase;
 				font-style: normal;
+				letter-spacing: 1px;
+				font-weight: 100;
+			}
+		}
+	}
+
+	&-cover {
+		border-radius: 12px;
+		min-height: 430px;
+		overflow: hidden;
+		cursor: pointer;
+		margin-bottom: 0;
+		height: auto;
+
+		&__inner-container {
+
+			p {
+				font-size: 20px !important;
+    			text-transform: uppercase;
+				opacity: 0;
+			}
+		}
+
+		&:hover {
+
+			p {
+				animation: fade-in-up 1s linear both !important;
 			}
 		}
 	}

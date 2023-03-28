@@ -34,7 +34,7 @@
 			.swiper-wrapper {
 				grid-auto-flow: column;
 				display: grid !important;
-				height: 420px;
+				height: auto;
 				gap: 0;
 
 				@include media-breakpoint-down(sm) {
@@ -64,9 +64,8 @@
 			}
 
 			&--pagination {
-				position: relative;
+				position: initial;
 				text-align: center;
-				flex-wrap: wrap;
 				max-width: 440px;
 				margin: 0 auto;
 				padding: 0;

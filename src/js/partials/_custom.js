@@ -81,5 +81,29 @@ document.addEventListener("DOMContentLoaded", function() {
 		type:'inline',
 		midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
 	});
+
+	// Compare images
+	var switcher = document.querySelector(".compare-switcher");
+	var topImage = document.querySelector(".compare-img.top");
+	var compareBox = document.querySelector(".compare-box");
+	var updatePosition = function (e) {
+		var left = e.clientX;
+		var boxLeft = compareBox.getBoundingClientRect().left;
+		var boxRight = compareBox.getBoundingClientRect().right;
+		var diff = left - boxLeft;
+		if (diff >= 0 && diff <= boxRight - boxLeft) {
+			switcher.style.left = left - boxLeft - 10 + "px";
+			topImage.style.width = left - boxLeft + "px";
+		}
+	};
+	switcher.addEventListener("mousedown", function (e) {
+		compareBox.addEventListener("mousemove", updatePosition);
+		compareBox.addEventListener("mouseleave", function () {
+			compareBox.removeEventListener("mousemove", updatePosition);
+		});
+		compareBox.addEventListener("mouseup", function () {
+			compareBox.removeEventListener("mousemove", updatePosition);
+		});
+	});
 	
 });
