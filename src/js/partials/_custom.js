@@ -92,8 +92,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		var boxRight = compareBox.getBoundingClientRect().right;
 		var diff = left - boxLeft;
 		if (diff >= 0 && diff <= boxRight - boxLeft) {
-			switcher.style.left = left - boxLeft - 10 + "px";
-			topImage.style.width = left - boxLeft + "px";
+			switcher.style.left = left - boxLeft - 5 + "px";
+			topImage.style.width = left - boxLeft - 12 + "px";
 		}
 	};
 	switcher.addEventListener("mousedown", function (e) {
