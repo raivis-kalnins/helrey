@@ -4,153 +4,140 @@ footer {
 	&.wp-block-template-part {
 		background-color: $white;
 
+		.row.one-column-layout > .wp-block-dpwpblocks-column {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
 		.foo {
 
-			&-top {
+			&--title {
+				border: $white solid 2px;
+				border-radius: 0 0 25px 25px;
+				border-top: 0;
+			}
+
+			&--top {
 				padding: 45px 0;
 
-				.row {
+				.wp-block-dpwpblocks-column {
 
-					.col {
+					&:nth-child(1) {
 
-						&:nth-child(1) {
-
-							@include media-breakpoint-down(lg) {
-								border-bottom: $white solid 1px;
-								margin-bottom: 40px;
-								padding-bottom: 20px;
-							}
-
-							ul.contact-details {
-								display: inline-block;
-								padding-top: 10px;
-				
-								li {
-									position: relative;
-									max-width: 364px;
-									font-size: 14px;
-									color: rgba($white,0.4);
-									font-weight: $light;
-									padding-left: 30px;
-				
-									&::before {
-										content:'';	
-										background: url('../../assets/img/svg/contact-phone.svg') 100% / auto 100% no-repeat;
-										transform: translateY(-50%);
-										position: absolute;
-										border-radius: 0;
-										display: block;									
-										width: 15px;
-										height: 15px;
-										top: 50%;
-										left: 0;
-									}
-				
-									&:nth-child(3)::before,
-									&:nth-child(4)::before {
-										background-image: url('../../assets/img/svg/contact-email.svg');
-										width: 18px;
-										height: 15px;
-									}
-				
-									&:nth-child(5)::before {
-										background-image: url('../../assets/img/svg/contact-location.svg');
-										width: 13px;
-										height: 18px;
-									}
-								}
-							}
+						@include media-breakpoint-down(lg) {
+							border-bottom: $white solid 1px;
+							margin-bottom: 40px;
+							padding-bottom: 20px;
 						}
 
-						&:nth-child(2) {
-
-							@include media-breakpoint-down(lg) {
-								border-bottom: $white solid 1px;
-								margin-bottom: 50px;
-							}
-							
-							&::after {
-								content:'';
-								border-right: $white solid 1px;
-								position: absolute;
-								height: 100%;
-								left: -15px;
-								top: 0;
-
-								@include media-breakpoint-down(xl) {
-									display: none;
-								}
-							}
-						}
-
-						&:nth-child(3) {
-
-							&::after {
-								content:'';
-								border-right: $white solid 1px;
-								position: absolute;
-								height: 100%;
-								left: -15px;
-								top: 0;
-
-								@include media-breakpoint-down(xl) {
-									display: none;
-								}
-							}
-						}
-
-						p {
-
-							&.has-text-color {
-								margin-bottom: 25px;
-							}
-						}
-
-						ul {
-							list-style: none;
-							padding-left: 0;
-
+						ul.contact-details {
+							display: inline-block;
+							padding-top: 10px;
+			
 							li {
-								margin-bottom: 15px;
-
-								strong a {
-									font-weight: $semibold;
-									color: $white;
-								}
+								position: relative;
+								max-width: 364px;
+								font-size: 14px;
+								color: rgba($white,0.4);
+								font-weight: $light;
+								padding-left: 30px;
 
 								a {
-									transition: all 0.3s ease-out;
-									font-weight: $light;
-									color: rgba($white,0.65);
-
-									&:hover {
-										text-decoration: underline;
-										transition: all 0.3s ease-out;
-										opacity: 0.5;
-									}
-
-									strong {
-										font-weight: $semibold;
-										color: $white;
-									}
+									color: $white !important;
 								}
-								
+			
+								&::before {
+									content:'';	
+									background: url('../../assets/img/svg/contact-phone.svg') 100% / auto 100% no-repeat;
+									transform: translateY(-50%);
+									position: absolute;
+									border-radius: 0;
+									display: block;									
+									width: 15px;
+									height: 15px;
+									top: 50%;
+									left: 0;
+								}
+			
+								&:nth-child(3)::before,
+								&:nth-child(4)::before {
+									background-image: url('../../assets/img/svg/contact-email.svg');
+									width: 18px;
+									height: 15px;
+								}
+			
+								&:nth-child(5)::before {
+									background-image: url('../../assets/img/svg/contact-location.svg');
+									width: 13px;
+									height: 18px;
+								}
+							}
+						}
+					}
+
+					&:nth-child(2) {
+
+						@include media-breakpoint-down(lg) {
+							border-bottom: $white solid 1px;
+							margin-bottom: 50px;
+						}
+					}
+
+					p {
+
+						&.has-text-color {
+							margin-bottom: 25px;
+						}
+					}
+
+					ul {
+						list-style: none;
+						padding-left: 0;
+
+						li {
+							margin-bottom: 15px;
+
+							strong a {
+								font-weight: $semibold;
+								color: $white;
+							}
+
+							a {
+								transition: all 0.3s ease-out;
+								font-weight: $light;
+								color: rgba($white,0.65);
+
+								&:hover {
+									text-decoration: underline;
+									transition: all 0.3s ease-out;
+									opacity: 0.5;
+								}
+
 								strong {
 									font-weight: $semibold;
 									color: $white;
 								}
 							}
+							
+							strong {
+								font-weight: $semibold;
+								color: $white;
+							}
 						}
+					}
 
-						input {
-							max-width: 220px;
-							float: right;
-						}
+					input {
+						background: transparent !important;
+						border-bottom: $white solid 1px;						
+						max-width: 220px;
+						border-radius: 0;
+						padding-left: 0;						
+						float: right;
 					}
 				}
 			}
 
-			&-copy {
+			&--copy {
 				width: 100vw;
 				border-top: $white solid 1px;
 	
