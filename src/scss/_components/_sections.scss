@@ -130,12 +130,10 @@
 	}
 
 	&__app-delivery {
-		
-		&--title {
-
-		}
 
 		&--slider {
+			border-bottom: $grey-light solid 5px;
+			border-top: $grey-light solid 5px;
 			justify-content: center;
 			align-items: center;
 			--bs-gutter-x: 0;
@@ -196,7 +194,7 @@
 
 			.compare-switcher {
 				left: calc(50% - 5px);
-				background: $grey-light2;
+				background: $grey-light;
 				position: absolute;
 				cursor: pointer;
 				height: 100%;
@@ -205,15 +203,20 @@
 				top: 0;
 			
 				&::before {
-					content: '';
-					transform: translate(-50%, -50%) rotate(45deg);
-					border: 5px solid $grey-light2;
-					background: transparent;			
+					content: 'PAVELC MANI';
+					transform: translate(-50%, -50%);
+					border: $black solid 2px;
+					border-radius: 100%;
+					background: $white;
+					text-align: center;		
 					position: absolute;
+					font-weight: $bold;
+					font-size: 15px;
+					padding: 22px 0;
 					top: 50%;
 					left: 50%;					
-					width: 30px;
-					height: 30px;
+					width: 90px;
+					height: 90px;
 				}
 			}
 		}
