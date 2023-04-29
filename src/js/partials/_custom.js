@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	var $ = jQuery.noConflict(),
 		d = new Date(),
 		n = d.getFullYear(),
+		w = 75 + 'vw',
 		page = $('html, body');
 
 		$('.foo-copy s').text(n).addClass('foo-copy-year');
@@ -82,6 +83,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
 	});
 
+	setTimeout(function() {
+		$('.compare-img.top').css('width', w).addClass('pavelc');
+		$('.compare-switcher').css('left', w).addClass('pavelc');
+	}, 500);
+
 	// Compare images
 	var switcher = document.querySelector('.compare-switcher');
 	var topImage = document.querySelector('.compare-img.top');
@@ -92,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		var boxRight = compareBox.getBoundingClientRect().right;
 		var diff = left - boxLeft;
 		if (diff >= 0 && diff <= boxRight - boxLeft) {
-			$('.section__app-delivery--slider .wp-block-dpwpblocks-column .row .compare-img.bottom .wp-block-image').css('left', left - boxLeft - 5 + 'px');
+			$('.section__app-delivery--slider .wp-block-dpwpblocks-column .row .compare-img.bottom .wp-block-image').css('left', left - boxLeft - 5 + 'px').addClass('pavelc');
 			switcher.style.left = left - boxLeft - 5 + 'px';
 			topImage.style.width = left - boxLeft - 12 + 'px';
 		}
@@ -107,5 +113,4 @@ document.addEventListener("DOMContentLoaded", function() {
 			compareBox.removeEventListener('mousemove', updatePosition);
 		});
 	});
-	
 });

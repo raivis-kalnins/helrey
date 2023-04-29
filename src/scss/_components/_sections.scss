@@ -52,6 +52,7 @@
 
 		.row.one-column-layout:first-child {
 			padding: 0 !important;
+			height: calc(100vh - 75px);
 			width: 100vw;
 
 			& > .wp-block-dpwpblocks-column {
@@ -61,18 +62,19 @@
 		}
 
 		&--slider {
-			background: white !important;
+			background: $black !important;
 			max-width: none !important;
-			border: 20px white solid;
-			position: relative;
+			position: relative;			
 			overflow: hidden;
-			--bs-gutter-x: 0;			
+			--bs-gutter-x: 0;
+			border: 0;		
 			z-index: 1;
 
 			.swiper-wrapper {
 				grid-auto-flow: column;
 				display: grid !important;
-				height: auto;
+				position: relative;
+				padding: 200px 0;
 				gap: 0;
 
 				@include media-breakpoint-down(sm) {
@@ -83,7 +85,10 @@
 					padding: 0;
 
 					.wp-block-image {
+						background: $white;
 						text-align: center;
+						padding: 5px 3px;
+						margin: 0 -1px;
 
 						img {
 							box-shadow: 10px 5px 20px #00000012;
@@ -94,17 +99,6 @@
 
 					&-active {
 						position: relative;
-
-						figure {
-							transform: translate(-50%,-50%);
-							border: $white solid 5px;
-							position: absolute;
-							margin: 0 -20px;
-							min-width: 40vw;
-							left: 50%;
-							top: 50%;
-							z-index: 999;
-						}
 					}
 				}
 			}
@@ -114,7 +108,8 @@
 			position: relative;
 			list-style: none;
 			padding-left: 0;
-			margin-top: 30px;	
+			margin-top: -150px;
+			padding-bottom: 150px;
 			z-index: 2;
 
 			@include media-breakpoint-down(lg) {
@@ -181,7 +176,8 @@
 
 					.wp-block-image {
 						position: absolute;
-						width: 50vw;
+						height: calc(100vh - (140px + 75px));
+						width: 100%;
 					}
 
 					.compare-img {
@@ -195,7 +191,7 @@
 						img {
 							object-position: right;
 							object-fit: cover;
-							width: 50vw;
+							width: auto;
 							height: 100%;
 						}
 
@@ -208,7 +204,8 @@
 							left: 0;
 
 							.wp-block-image {
-								left: 50vw !important;
+								transform: translateX(-50%);
+								left: 50% !important;
 								position: relative;
 								margin: 0;
 							}
@@ -217,7 +214,7 @@
 						&.top {
 							background-color: $black !important;
 							position: absolute;
-							width: 50%;
+							width: 70%;
 							height: 100%;
 							z-index: 2;
 							left: 0;
@@ -248,10 +245,10 @@
 					font-weight: $bold;
 					font-size: 15px;
 					padding: 22px 0;
-					top: 50%;
-					left: 50%;					
 					width: 90px;
 					height: 90px;
+					left: 50%;
+					top: 50%;
 				}
 			}
 		}
