@@ -98,7 +98,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		var boxRight = compareBox.getBoundingClientRect().right;
 		var diff = left - boxLeft;
 		if (diff >= 0 && diff <= boxRight - boxLeft) {
-			$('.section__app-delivery--slider .wp-block-dpwpblocks-column .row .compare-img.bottom .wp-block-image').css('left', left - boxLeft - 5 + 'px').addClass('pavelc');
+			$('.section__app-delivery--slider .wp-block-dpwpblocks-column .row .compare-img.bottom .wp-block-image').css('left', left - boxLeft - 5 + 'px');
+			$('.compare-img.top, .compare-switcher').removeClass('pavelc');
 			switcher.style.left = left - boxLeft - 5 + 'px';
 			topImage.style.width = left - boxLeft - 12 + 'px';
 		}

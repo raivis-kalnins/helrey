@@ -242,25 +242,23 @@
 
 @include keyframes(wobble-hor-bottom) {
 
-	0%,
-	100% {
-		transform: translateX(0%);
-		transform-origin: 50% 50%;
+	0% {
+		margin-left: 0;
 	}
 	15% {
-		transform: translateX(-10px) rotate(-3deg);
+		margin-left: -5px;
 	}
 	30% {
-		transform: translateX(10px) rotate(4deg);
+		margin-left: 5px;
 	}
 	45% {
-		transform: translateX(-10px) rotate(-3.6deg);
+		margin-left: -5px;
 	}
 	60% {
-		transform: translateX(6px) rotate(2.4deg);
+		margin-left: 5px;
 	}
 	75% {
-		transform: translateX(-3px) rotate(-1.2deg);
+		margin-left: -5px;
 	}
 }
 
