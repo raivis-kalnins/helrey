@@ -46,15 +46,27 @@
 
 	&__about {
 		--bs-gutter-x: 0;
+		position: relative;
 		padding: 0;
+		z-index: 2;
+
+		.row.one-column-layout:first-child {
+			padding: 0 !important;
+			width: 100vw;
+
+			& > .wp-block-dpwpblocks-column {
+				padding: 0 !important;
+				margin-right: -15px;
+			}
+		}
 
 		&--slider {
 			background: white !important;
 			max-width: none !important;
+			border: 20px white solid;
 			position: relative;
 			overflow: hidden;
-			--bs-gutter-x: 0;
-			padding: 25px 0;
+			--bs-gutter-x: 0;			
 			z-index: 1;
 
 			.swiper-wrapper {
@@ -68,6 +80,7 @@
 				}
 
 				.swiper-slide {
+					padding: 0;
 
 					.wp-block-image {
 						text-align: center;
@@ -76,6 +89,21 @@
 							box-shadow: 10px 5px 20px #00000012;
 							border-radius: 9px !important;
 							min-width: 100%;
+						}
+					}
+
+					&-active {
+						position: relative;
+
+						figure {
+							transform: translate(-50%,-50%);
+							border: $white solid 5px;
+							position: absolute;
+							margin: 0 -20px;
+							min-width: 40vw;
+							left: 50%;
+							top: 50%;
+							z-index: 999;
 						}
 					}
 				}
@@ -102,6 +130,7 @@
 
 				.swiper-pagination-bullet {
 					background-color: rgba($white,0.3);
+					transition: 0.2s ease width;
 					font-weight: $light;
 					cursor: pointer;
 					width: 15px;
@@ -114,6 +143,7 @@
 					}
 
 					&-active {
+						transition: all .3s ease-out;
 						background: $grey-light;
 						border-radius: 20px;
 						font-weight: $bold;
@@ -149,6 +179,11 @@
 				.row {
 					--bs-gutter-x: 0;
 
+					.wp-block-image {
+						position: absolute;
+						width: 50vw;
+					}
+
 					.compare-img {
 						pointer-events: none;
 						overflow: hidden;
@@ -173,9 +208,9 @@
 							left: 0;
 
 							.wp-block-image {
+								left: 50vw !important;
 								position: relative;
 								margin: 0;
-								left: 50%;
 							}
 						}
 						

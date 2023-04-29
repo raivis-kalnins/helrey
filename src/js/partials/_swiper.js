@@ -16,13 +16,17 @@ document.addEventListener("DOMContentLoaded", function() {
 		slidesPerColumnFill: 'row',
 		centeredSlides: true,
 		slidesPerView: 3.5,
-		spaceBetween: 0,
+		spaceBetween: 5,
 		loop: true,
 		speed: 2000,
 		// autoplay: {
 		// 	delay: 4000,
 		// 	disableOnInteraction: false,
 		// },
+		// zoom: {
+		// 	maxRatio: 2,
+		// 	minRatio: 1
+	  	// },
 		breakpoints: {
 			320: {
 				slidesPerView: 1
@@ -31,11 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
 				slidesPerView: 2
 			},
 			992: {
-				slidesPerView: 3
+				slidesPerView: 3.5
 			},
-			1281: {
-				slidesPerView: 3
-			}
 		},
 		keyboard: {
 			enabled: true,
@@ -50,6 +51,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		  },
 		grabCursor: true
 	});
+
+	// swiper.zoom.in();
+	// swiper.on("slideChangeTransitionStart", function() { swiper.zoom.out() });
+	// swiper.on("slideChangeTransitionEnd", function() { swiper.zoom.in() });
 
 	$('.swiper-pagination-bullets .swiper-pagination-bullet').each(function() {
 		i++;
