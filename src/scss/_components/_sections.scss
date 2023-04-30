@@ -114,6 +114,7 @@
 
 			@include media-breakpoint-down(lg) {
 				overflow-x: auto;
+				margin-top: -70px;
 			}
 
 			&--pagination {
@@ -177,7 +178,7 @@
 					.wp-block-image {
 						position: absolute;
 						height: calc(100vh - (140px + 75px));
-						width: 100%;
+						width: 100vw;
 					}
 
 					.compare-img {
